@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react'
+import LandingPage from './pages/LandingPage'
 
 function App() {
 
@@ -6,7 +7,7 @@ function App() {
 
 
     <>
-      <p className="text-red-500">Hello World</p>
+      <LandingPage />
 
     </>
 

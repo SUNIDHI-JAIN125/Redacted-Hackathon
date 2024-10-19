@@ -31,7 +31,7 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-radial-to-t': 'radial-gradient(circle_at_top_left,(var(--tw-gradient-stops))',
-
+        'images': "url('.assets/hulk.png')"
 
       },
 
@@ -42,7 +42,8 @@ export default {
         "primary-card": "#0E0949",
         "primary-bg-blend": '#BDDBFB',
         "primary-text-color": "#2E3449",
-        "primary-black-text": "#3D3D3D",
+        "primary-bg-dark": "#000C24",
+        "primary-bg-light": "#041A3A",
         "modal-bg": "#11111190"
 
 

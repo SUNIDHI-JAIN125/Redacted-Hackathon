@@ -18,7 +18,7 @@ const BlockChainGames = () => {
                 <hr className='h-[1px] my-8 text-gray-500' />
 
                 <div className='flex space-x-2 font-semibold text-gray-100 my-4 items-center'>
-                    <p className={`${currentTab == 0 ? "bg-slate-500 px-3 py-2 rounded-sm" : ""} cursor-pointer`} onClick={(e) => handleChangeTab(0)}>Top Action Games</p>
+                    <p className={`${currentTab == 0 ? "bg-slate-500 px-3 py-2 rounded-sm" : ""} cursor-pointer`} onClick={(e) => handleChangeTab(0)}>Top Game</p>
                     <p className={`${currentTab == 1 ? "bg-slate-500 px-3 py-2 rounded-sm" : ""} cursor-pointer`} onClick={(e) => handleChangeTab(1)}>Top NFT</p>
                     <p className={`${currentTab == 2 ? "bg-slate-500 px-3 py-2 rounded-sm" : ""} cursor-pointer`} onClick={(e) => handleChangeTab(2)}>Move2Earn</p>
                     <p className={`${currentTab == 3 ? "bg-slate-500 px-3 py-2 rounded-sm" : ""} cursor-pointer`} onClick={(e) => handleChangeTab(3)}>Others</p>
@@ -57,7 +57,7 @@ const BlockChainGames = () => {
                                     {i + 1}
                                 </th>
                                 <td class="px-6 py-4 flex space-x-3 items-center">
-                                    <img src={i % 2 == 0 ? blast: bnb} className='w-[30px]'/>
+                                    <img src={i % 2 == 0 ? blast : bnb} className='w-[30px]' />
                                     <p>{i % 2 !== 0 ? "Immortal Army" : "Rush Tower"}</p>
 
                                 </td>

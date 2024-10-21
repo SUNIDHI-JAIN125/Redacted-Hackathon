@@ -1,0 +1,11 @@
+Model Information:
+* title:	HCR2 Racing Truck
+* source:	https://sketchfab.com/3d-models/hcr2-racing-truck-8506b2861e734c4083db2e96a717dbf1
+* author:	oakar258 (https://sketchfab.com/oakar258)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "HCR2 Racing Truck" (https://sketchfab.com/3d-models/hcr2-racing-truck-8506b2861e734c4083db2e96a717dbf1) by oakar258 (https://sketchfab.com/oakar258) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -17,8 +17,6 @@ app.use(cors());
 const DAPP_RADAR_BASE_URL = 'https://apis.dappradar.com/v2/dapps/';
 
 
-
-
 const Game = require('./models/Game');
 
 async function fetchGameData(gameID) {

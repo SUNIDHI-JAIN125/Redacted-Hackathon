@@ -1,45 +1,52 @@
 import React, { Suspense } from 'react'
-import { hulk, skate } from '../assets'
+import { boy, heroImage, hulk, skate } from '../assets'
 import { Canvas } from '@react-three/fiber'
 import { Environment, OrbitControls, useGLTF } from '@react-three/drei'
 import Car from '../../public/Car'
 
 const Hero = () => {
     useGLTF.preload('human.gltf')
+
+    const listOfNfts = [1, 2, 3, 4]
+
     return (
-        <div className='relative my-4 lg:px-20 xl:px-40 3xl:px-80'>
+        <div className='my-4 3xl:px-80'>
 
-            <div className='flex flex-1 justify-between items-center min-h-[500px]'>
-                <div className='flex-[0.4] flex-col flex'>
 
-                    <p className='2xl:text-8xl text-5xl font-poppins font-semibold text-white my-4'>The World Dapp Store</p>
-                    <p className='text-2xl font-poppins  text-white my-2'>Discover, Track & Trade Everything Defi, NFT and Gaming</p>
+            <div className=' min-h-[300px] flex flex-1 space-x-3'>
+                <div className='flex flex-[0.7] p-4 bg-primary-bg-light rounded-xl'>
+                    <div className='w-3/5 rounded-xl bg-modal-bg  p-4 h-full'>
+                        <p className='2xl:text-8xl text-[40px] font-spacegrotesk font-semibold text-white mt-4'>The World Dapp Store</p>
+                        <p className='text-xl  text-white my-1 font-spacegrotesk'>Discover, Track & Trade Everything Defi, NFT and Gaming</p>
+                        <div className='flex space-x-3 my-4'>
+                            <button className='bg-blue-600 py-2 px-4 text-white font-poppins rounded-sm '>Explore Dapp </button>
+                            <button className=' bg-transparent border border-white py-2 px-4 text-white font-poppins rounded-sm'>List a Project </button>
 
-                    <div className='my-4 space-x-3'>
-                        <button className='bg-blue-600 py-2 px-4 text-white font-poppins rounded-sm'>Explore Dapp </button>
-                        <button className=' bg-transparent border border-white py-2 px-4 text-white font-poppins rounded-sm'>List a Project </button>
+                        </div>
+                    </div>
+                    <div className='w-2/5'>
+                        <img src={heroImage} className='' />
                     </div>
                 </div>
-                <div className='flex-[0.6]'>
-                    <div className='w-5/6 mx-auto mt-5'>
-                        <Canvas className='w-full' camera={{ position: [5, 2, 10], fov: 15 * (window.innerWidth/window.innerHeight) }} >
+                <div className='flex-[0.3] rounded-xl bg-gray-100 min-h-[300px] p-4'>
+                    <p className='font-semibold text-[20px] my-2'>Top NFTs</p>
+                    {listOfNfts?.map((e, i) => <div className='flex my-2 justify-between'>
+                        <div className='flex space-x-2 items-center'>
+                            <img src={boy} className='rounded-full w-[40px]  h-[40px] border' />
+                            <div className='text-[12px] font-spacegrotesk font-semibold'>
+                                <p>Jacks NFts</p>
+                                <p>900K Holders</p>
 
-                            <ambientLight intensity={4} args={["#ffffff", 1]} />
-                            <OrbitControls enableZoom={false} autoRotate={true} />
-                            <Suspense fallback={null}>
-                                <Car />
+                            </div>
+                        </div>
+                        <p className='p-2 text-primary-bg-light font-spacegrotesk text-[14px]'>$122</p>
 
-                            </Suspense>
-                            <Environment preset='sunset' />
-
-
-                        </Canvas>
-
-                        {/* <img src={skate} className='z-10' /> */}
-                    </div>
+                    </div>)}
                 </div>
+
 
             </div>
+            {/* <img src={skate} className='z-10' /> */}
 
 
 

@@ -42,8 +42,12 @@ export default {
         "primary-card": "#0E0949",
         "primary-bg-blend": '#BDDBFB',
         "primary-text-color": "#2E3449",
-        "primary-bg-dark": "#000C24",
-        "primary-bg-light": "#041A3A",
+        // "primary-bg-dark": "#000C24",
+         "primary-bg-dark":"#111314",
+        // "primary-bg-light": "#041A3A",
+         "primary-bg-light": "#FB5875",
+         "bg-light": "#1C1E20",
+       
         "modal-bg": "#11111190"
 
 

@@ -10,10 +10,10 @@ const Hero = () => {
     const listOfNfts = [1, 2, 3, 4]
 
     return (
-        <div className='my-4 3xl:px-80'>
+        <div className='my-4'>
 
 
-            <div className=' min-h-[300px] flex flex-1 space-x-3'>
+            <div className=' min-h-[350px] flex flex-1 space-x-3'>
                 <div className='flex flex-[0.7] p-4 bg-primary-bg-light rounded-xl'>
                     <div className='w-3/5 rounded-xl bg-modal-bg  p-4 h-full'>
                         <p className='2xl:text-8xl text-[40px] font-spacegrotesk font-semibold text-white mt-4'>The World Dapp Store</p>

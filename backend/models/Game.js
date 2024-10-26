@@ -7,5 +7,9 @@ const GameSchema = new mongoose.Schema({
   lastFetched: { type: Date, default: Date.now }
 });
 
-const Game = mongoose.model('Game', GameSchema);
+
+
+const Game = mongoose.model('Games', GameSchema);
+
 module.exports = Game;
+

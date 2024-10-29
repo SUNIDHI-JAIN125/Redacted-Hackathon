@@ -108,9 +108,11 @@ app.get('/all/:start', async (req, res) => {
   try {
     const gameData = await fetchPaginatedGames(currentPage);
     res.json(gameData);
-
+    console.log(gameData);
+    
 
   } catch (error) {
+    console.log(error);
     res.status(400).json({ "Error": "Error" })
 
   }

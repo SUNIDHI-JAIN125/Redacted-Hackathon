@@ -35,6 +35,7 @@ export const AppContextProvider = ({ children }) => {
 
         try {
             const response = await axios.get(`${url}/game/${id}`);
+            console.log(response.data.results, "YYY")
             setCurrentGame(response.data.results)
             return {}
 

@@ -73,7 +73,7 @@ async function fetchPaginatedGames(page) {
       },
     });
     const gameData = response.data;
-    await Game.findOneAndUpdate(
+    await PaginatedGames.findOneAndUpdate(
       { page },
       { data: gameData, lastFetched: Date.now() },
       { upsert: true } // Create a new document if it doesn't exist

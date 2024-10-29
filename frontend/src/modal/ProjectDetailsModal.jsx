@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../ContextAPI'
+import Chart from '../components/Chart'
+import { div } from 'three/webgpu'
 
 const ProjectDetailsModal = () => {
     const { currentGame, setCurrentModal, setCurrentGame } = useContext(AppContext)
@@ -14,9 +16,26 @@ const ProjectDetailsModal = () => {
                             setCurrentGame(null)
                         }}>x</p>
                     </div>
+                    <div>
+                        <p>Tokens</p>
+                        {currentGame?.tokens?.map((e, i) => <div className='flex text-[13px] font-spacegrotesk'>
+                            <div className='p-4 rounded-lg border shadow-lg bg-gray-900 text-white'>Symbol : {e?.symbol}</div>
+                            <div className='p-4 rounded-lg border shadow-lg bg-gray-900 text-white flex '>Logo  :  <img src={e?.logo} className='ml-2'/></div>
+                            <div className='p-4 rounded-lg border shadow-lg bg-gray-900 text-white'>Price : {e?.price ? e?.price : "N/A"}</div>
+                            <div className='p-4 rounded-lg border shadow-lg bg-gray-900 text-white'>Contract Address : {e?.smartContract}</div>
+                            <div className='p-4 rounded-lg border shadow-lg bg-gray-900 text-white'>% Price Change : {e?.pricePercentageChange ? e?.pricePercentageChange
+:"N/A"                           }</div>
+
+
+
+
+
+                        </div>)}
+                    </div>
+                    <Chart />
 
                     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <thead class="text-xs  uppercase bg-gray-900 dark:text-gray-40 text-white">
                             <tr>
                                 <th scope="col" class="px-6 py-3">
                                     #
@@ -38,13 +57,13 @@ const ProjectDetailsModal = () => {
                                     Volume
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    %Change
+                                    Volume %Change
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="relative odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 capitalize">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            <tr class="relative dark:bg-gray-900  border-b capitalize">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                     1
                                 </th>
                                 <td class="px-6 py-4">
@@ -64,12 +83,13 @@ const ProjectDetailsModal = () => {
                                     {currentGame?.metrics?.volume ? currentGame?.metrics?.volume : 0}
                                 </td>
                                 <td class={` px-6 py-4`}>
-                                    <p className={`${currentGame?.metrics?.balancePercentageChange < 0 ? "text-red-400" : "text-green-500"}`}> {currentGame?.metrics?.balancePercentageChange ? currentGame?.metrics?.balancePercentageChange : 0} %</p>
+                                    <p className={`${currentGame?.metrics?.volumePercentageChange < 0 ? "text-red-400" : "text-green-500"}`}> {currentGame?.metrics?.volumePercentageChange ? currentGame?.metrics?.volumePercentageChange : 0} %</p>
                                 </td>
 
 
 
 
+                                
 
 
 

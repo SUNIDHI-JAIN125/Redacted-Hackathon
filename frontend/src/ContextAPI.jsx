@@ -10,13 +10,13 @@ export const AppContextProvider = ({ children }) => {
     const [others, setOthers] = useState([])
     const [currentModal, setCurrentModal] = useState(false)
 
-    const url = import.meta.env.VITE_BACKEND_URL
+
 
     const fetchItems = async (page) => {
 
         const currentPage = page ? page : 1
         try {
-            const response = await axios.get(`${url}/all/${currentPage}`);
+            const response = await axios.get(`https://redacted-hackathon.vercel.app/all/${currentPage}`);
             const filterGames = response.data.results?.filter((e, i) => e.categories[0] == "games")
             const Nfts = response.data.results?.filter((e, i) => e.categories[0] == "collectibles")
             const others = response.data.results?.filter((e, i) => e.categories[0] !== "collectibles" && e.categories[0] !== "games")

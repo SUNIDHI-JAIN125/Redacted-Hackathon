@@ -16,10 +16,11 @@ const Hero = () => {
             <div className=' min-h-[350px] flex flex-1 space-x-3'>
                 <div className='flex flex-[0.7] p-4 bg-primary-bg-light rounded-xl'>
                     <div className='w-3/5 rounded-xl bg-modal-bg  p-4 h-full'>
-                        <p className='2xl:text-8xl text-[40px] font-spacegrotesk font-semibold text-white mt-4'>The World Dapp Store</p>
-                        <p className='text-xl  text-white my-1 font-spacegrotesk'>Discover, Track & Trade Everything Defi, NFT and Gaming</p>
-                        <div className='flex space-x-3 my-4'>
-                            <button className='bg-blue-600 py-2 px-4 text-white font-poppins rounded-sm '>Explore Dapp </button>
+                        <p className='2xl:text-8xl text-[40px] font-spacegrotesk font-semibold text-white mt-4'>World of Web3 Games</p>
+                        <p className='text-2xl  text-white my-3 font-spacegrotesk'>Play, Earn and Explore</p>
+                        <p className='text-xl  text-white my-3 font-spacegrotesk'>Discover, Track & Trade Everything Defi, NFT and Gaming</p>
+                        <div className='flex space-x-3 my-5'>
+                            <button className='bg-blue-600 py-3 px-4 text-white font-poppins rounded-sm '>Explore Dapp </button>
                             <button className=' bg-transparent border border-white py-2 px-4 text-white font-poppins rounded-sm'>List a Project </button>
 
                         </div>

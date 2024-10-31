@@ -46,7 +46,7 @@ const News = () => {
                        
                         <a href={game.link} target="_blank" rel="noopener noreferrer">
                             <img src={game.image} alt={game.title} className='object-fill  w-full h-4/5 rounded' />
-                            <p className=' text-white my-3  font-bold italic p-4 text-xl text-wrap '>{game.title}  </p>
+                            <p className=' text-white my-3  font-bold italic p-4 text-xl text-wrap hover:underline hover:text-blue-400'>{game.title} </p>
                         </a>
                     </div>
                 ))}

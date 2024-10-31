@@ -2,7 +2,7 @@ import React from 'react';
 import { boy, hulk, skate,web3games, playing,zioverse,bestgames } from '../assets';
 
 const News = () => {
-    // Updated featuredGames array with content for each game card
+    
     const featuredGames = [
         {
             id: 0,
